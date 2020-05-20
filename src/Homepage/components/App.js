@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import main from "../style/main.sass"
-
+import main from  "../style/main.sass"
 const contentHeight= window.innerHeight;
 
 function App(){

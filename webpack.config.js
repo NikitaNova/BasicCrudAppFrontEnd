@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports ={
-     entry: './src/Homepage/index.js',
+     entry: './src/AccountPage/index.js',
      output: {
           path:path.join(__dirname, "dist"),
           filename: "index_bundle.js"
@@ -23,12 +23,26 @@ module.exports ={
                          'css-loader',
                          'sass-loader'
                     ]
+               },
+               {
+                    test:/\.(svg|png|jpe?g|gif)$/,
+                    exclude: /node_modules/,
+                    use:{ 
+                         loader: 'file-loader',
+                         options: {
+                              name:"[name].[hash].[ext]",
+                              outputPath: "imgs"
+                         }
+                    }
+                    
                }
+               
+
           ]
      },
-     plugins: [
+     plugins:[
           new HtmlWebpackPlugin({
-               template: './src/Homepage/index.html'
+               template:"./src/AccountPage/accountPage.html"
           })
      ]
 }

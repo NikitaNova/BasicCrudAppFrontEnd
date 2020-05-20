@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  background-color: #ededed;
+  font-family: din-2014, sans-serif;
+  color: #0f0f0f;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+.pageContainer header {
+  height: 32%;
+  display: inline-grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100%;
+  justify-items: center;
+  align-items: center;
+  background-color: #0f0f0f;
+  border-bottom-right-radius: 20pt;
+  border-bottom-left-radius: 20pt;
+  box-shadow: 19pt 10pt 50pt #0f0f0f79;
+  container-overflow: visible;
+}
+.pageContainer header img {
+  height: 160pt;
+  width: 160pt;
+  margin: 40pt;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: self-start;
+  background: none;
+}
+.pageContainer header div {
+  height: 300pt;
+  width: 300pt;
+  margin-top: 10pt;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: self-start;
+  background-color: #ededed;
+  border-radius: 50%;
+  box-shadow: 19pt 10pt 50pt #0f0f0f79;
+  z-index: 1;
+}
+.pageContainer main {
+  height: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pageContainer main .infoDisplay {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 45pt;
+}
+.pageContainer main .infoDisplay img {
+  width: 50pt;
+  height: 50pt;
+  margin-right: 40pt;
+  margin-bottom: 27pt;
+  justify-self: flex-end;
+  align-self: flex-end;
+  background-color: none !important;
+}
+.pageContainer main .infoDisplay h4 {
+  margin-bottom: 20pt;
+}
+.pageContainer main .bioPage {
+  width: 45%;
+  height: 50%;
+  padding: 20pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0f0f0f;
+  border-top-left-radius: 20pt;
+  border-top-right-radius: 20pt;
+  box-shadow: 19pt 10pt 50pt #0f0f0f79;
+}
+.pageContainer main .bioPage h4 {
+  margin-bottom: 10pt;
+  background-color: inherit;
+  font-size: 30pt;
+  color: #ededed;
+}
+.pageContainer main .bioPage p {
+  background-color: inherit;
+  font-size: 25pt;
+  color: #ededed;
+}
+
+/*# sourceMappingURL=main.css.map */
