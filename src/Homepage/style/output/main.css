@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background-color: #ededed;
+  font-family: normal, din-2014, sans-serif;
+  font-size: 30pt;
+  color: #ededed;
+}
+
+.headContainer {
+  display: flex;
+  flex-direction: column;
+}
+.headContainer header {
+  height: 32%;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+  background-color: #0f0f0f;
+  border-bottom-left-radius: 20pt;
+  border-bottom-right-radius: 20pt;
+  box-shadow: 15pt 20pt 50pt #0f0f0f79;
+  color: #ededed;
+  font-size: 60pt;
+  font-weight: 700;
+}
+.headContainer header h1 {
+  margin-top: 10px;
+  margin-left: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer {
+  height: 68%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #0f0f0f;
+}
+.headContainer .logContainer h4 {
+  border-bottom: solid 10px #0f0f0f;
+  margin-block-start: 10%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer .logIn {
+  width: 35%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #FF4F00;
+  border-radius: 10pt;
+  box-shadow: 10pt 19pt 50pt #0f0f0f79;
+  font-size: 90pt;
+}
+.headContainer .logContainer .signUp {
+  height: 70%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10pt;
+  box-shadow: 10pt 19pt 50pt #0f0f0f79;
+  background-color: #194fff;
+  font-size: 90pt;
+  font-size: 90pt;
+}
+
+/*# sourceMappingURL=main.css.map */

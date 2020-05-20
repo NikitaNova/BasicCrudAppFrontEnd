@@ -1,0 +1,127 @@
+$font-regular: normal, din-2014, sans-serif
+$font-bold: bold, din-2014, sans-serif
+
+$orange: #FF4F00
+$blue: #194fff
+$black: #0f0f0f
+$black-transparent: #0f0f0f79
+$white: #ededed
+
+body
+     // Position | Size
+     margin:0
+
+     // Style
+     background-color: $white
+     
+     // Font
+     font-family: $font-regular
+     font-size: 30pt
+     color: $white
+
+
+
+
+.headContainer
+
+     // Position
+     display: flex
+     flex-direction: column
+
+     header
+          // Position | Size
+          height: 32%
+          display: flex
+          flex-direction: row
+          align-content: flex-start
+          justify-content: flex-start
+          
+
+          // Style
+          background-color: $black
+          border-bottom-left-radius: 20pt
+          border-bottom-right-radius: 20pt
+          box-shadow: 15pt 20pt 50pt $black-transparent
+
+          // Font 
+          color: $white
+          font-size: 60pt
+          font-weight:700
+
+          h1
+               // Position | Size
+               margin-top: 10px
+               margin-left: 40px
+
+               // Selectability
+               -webkit-user-select: none /* Safari */        
+               -moz-user-select: none /* Firefox */
+               -ms-user-select: none /* IE10+/Edge */
+               user-select: none /* Standard */
+
+               
+
+     .logContainer
+          // Position | Size
+          height: 68%
+          display: flex
+          flex-direction: row
+          justify-content: space-around
+          align-items: center
+
+          // Style
+          color:$black
+          
+          // Vars
+          $height:70%
+          $width: 35%
+          $fontSize: 90pt
+
+          h4
+               // Style
+               border-bottom: solid 10px $black
+               margin-block-start: 10%
+
+               // Selectability
+               -webkit-user-select: none /* Safari */        
+               -moz-user-select: none /* Firefox */
+               -ms-user-select: none /* IE10+/Edge */
+               user-select: none /* Standard */
+
+          .logIn
+               // Position | Size
+               width:$width
+               height:$height
+
+               display: flex
+               flex-direction: column
+               justify-content: flex-start
+               align-items: center
+               // Style
+               background-color: $orange
+               border-radius: 10pt
+               box-shadow: 10pt 19pt 50pt $black-transparent
+
+               // Font
+               font-size:$fontSize
+
+          
+
+          .signUp
+               // Position | Size
+               height:$height
+               width:$width
+
+               display: flex
+               flex-direction: column
+               align-items: center
+               justify-content: flex-start
+
+               // Style
+               border-radius: 10pt
+               box-shadow: 10pt 19pt 50pt $black-transparent
+               background-color: $blue
+
+               // Font
+               font-size: $fontSize
+               font-size:$fontSize
