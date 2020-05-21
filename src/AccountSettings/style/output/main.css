@@ -19,10 +19,11 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  width: 25%;
+  width: 30%;
   background-color: #0f0f0f;
   border-top-right-radius: 20pt;
   border-bottom-right-radius: 20pt;
+  box-shadow: 19pt 10pt 40pt #0f0f0f79;
 }
 .pageContainer aside .profilePhoto {
   height: 250pt;
@@ -81,6 +82,12 @@
   padding: 10pt;
   border-radius: 10pt;
   font-size: 15pt;
+  background-color: #ededed;
+  box-shadow: 5pt 10pt 25pt #0f0f0f3f;
+}
+.pageContainer main textarea {
+  background-color: #ededed;
+  box-shadow: 5pt 10pt 25pt #0f0f0f3f;
 }
 .pageContainer main button {
   width: 140pt;
@@ -90,6 +97,7 @@
   border-radius: 10pt;
   background-color: #194fff;
   color: #0f0f0f;
+  box-shadow: 5pt 10pt 25pt #0f0f0f3f;
 }
 .pageContainer .changeInfo {
   height: 100%;
@@ -164,13 +172,15 @@
   grid-row-end: 4;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: flex-end;
+  margin-bottom: 50pt;
 }
 .pageContainer .deleteAcc button {
   width: 250pt;
   height: 80pt;
   background-color: #FF4F00;
   border-radius: 10pt;
+  box-shadow: 15pt 15pt 35pt #0f0f0f4f;
   font-size: 30pt;
   font-weight: 700;
 }

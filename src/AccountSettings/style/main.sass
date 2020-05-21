@@ -32,7 +32,7 @@ $white: #ededed
           justify-content: flex-start
           align-items: center
           height: 100%
-          width:25%
+          width:30%
 
 
 
@@ -40,6 +40,7 @@ $white: #ededed
           background-color: $black
           border-top-right-radius: 20pt
           border-bottom-right-radius: 20pt
+          box-shadow: 19pt 10pt 40pt $black-transparent
 
           .profilePhoto
                // Position | Size
@@ -116,15 +117,27 @@ $white: #ededed
 
                font-size: 15pt
 
+               // Style
+               background-color: $white
+               box-shadow: 5pt 10pt 25pt #0f0f0f3f
+
+          textarea
+
+               // Style
+               background-color: $white
+               box-shadow: 5pt 10pt 25pt #0f0f0f3f
+
           button
-                    width: 140pt
-                    height: 40pt
-                    margin: 10pt
-                    font-size: 25pt
-                    // Style
-                    border-radius: 10pt
-                    background-color: $blue
-                    color: $black
+               width: 140pt
+               height: 40pt
+               margin: 10pt
+               font-size: 25pt
+               // Style
+               border-radius: 10pt
+               background-color: $blue
+               color: $black
+               box-shadow: 5pt 10pt 25pt #0f0f0f3f
+               
           
      
      .changeInfo
@@ -217,7 +230,10 @@ $white: #ededed
 
           display: flex
           justify-content: center
-          align-content: center
+          align-items: flex-end
+
+          margin-bottom: 50pt
+
 
           button
                width: 250pt
@@ -226,10 +242,12 @@ $white: #ededed
                // Style
                background-color: $orange
                border-radius: 10pt
+               box-shadow: 15pt 15pt 35pt #0f0f0f4f
                
                // Font
                font-size: 30pt
                font-weight: 700
+
 
 
 
