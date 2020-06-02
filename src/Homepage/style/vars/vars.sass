@@ -1,0 +1,92 @@
+// Position & Size
+@mixin logBoxSize()
+     width: 490pt
+     height: 350pt
+
+@mixin defaultFlex($column-or-row, $justify, $align)
+     display: flex
+     flex-direction: $column-or-row
+     justify-content: $justify
+     align-items: $align
+
+@mixin defaultFormSize()
+     width: 90%
+     height: 100%
+
+@mixin inputSize()
+     width: 150pt
+     height: 30pt
+
+@mixin buttonSize()
+     width: 130pt
+     height: 35pt
+
+// Style
+
+@mixin headerBoxShadowRadius()
+     border-bottom-left-radius: 20pt
+     border-bottom-right-radius: 20pt
+     box-shadow: 15pt 20pt 50pt $black-transparent
+
+@mixin boxShadowRadius()
+     border-radius: 10pt
+     box-shadow: 15pt 20pt 50pt $black-transparent
+
+@mixin marginTopBottom($top-bottom, $left-right)
+     margin: $top-bottom $left-right
+
+@mixin inputStyle()
+     background: none
+     border: none
+     border-bottom: 2pt solid $black
+     outline: none
+
+@mixin defaultButtonStyle()
+     position: relative
+     bottom: 25pt
+     background-color: $black
+     border: none
+     border-radius: 8pt
+     outline: none
+     align-self: end
+     margin:0
+
+// Color
+
+$orange: #FF4F00
+$blue: #194fff
+$black: #0f0f0f
+$black-transparent: #0f0f0f79
+$white: #ededed
+
+// Font
+$smallFontSize: 20pt
+$normalFontSize: 40pt
+$largeFontSize: 60pt
+$extraLargeFontSize: 110pt
+
+@mixin defaultMarginBlock()
+     margin-block-start: .5em
+     margin-block-end: .1em
+
+@mixin DINnormal($color,$font-size)
+     font-family: normal, din-2014, sans-serif
+     font-weight: 400
+     font-size: $font-size
+     color: $color
+
+     -webkit-user-select: none /* Safari */        
+     -moz-user-select: none /* Firefox */
+     -ms-user-select: none /* IE10+/Edge */
+     user-select: none /* Standard */
+
+@mixin DINbold($color, $font-size)
+     font-family: normal, din-2014, sans-serif
+     font-weight: 700
+     color: $color
+     font-size: $font-size
+
+     -webkit-user-select: none /* Safari */        
+     -moz-user-select: none /* Firefox */
+     -ms-user-select: none /* IE10+/Edge */
+     user-select: none /* Standard */
