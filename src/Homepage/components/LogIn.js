@@ -1,5 +1,6 @@
-import React,{useState, useEffect} from "react"
-
+import React, {useState, useEffect} from "react"
+import anime, {play} from "animejs/lib/anime.es"
+import {logInReveal} from './animation/ButtonAnim'
 
 function LogIn(prop){
      let [username, setUsername] = useState("")
@@ -25,15 +26,35 @@ function LogIn(prop){
 
      }
 
-     useEffect(()=>{
-          console.log("Log-In is Working")
-     })
+     const handleClick = () =>{
+          console.log("Click")
+          anime.timeline({  
+               autoplay: true,
+               loop:false,
+               easing: 'easeOutExpo'
+          })
+          .add({
+               targets:'.logIn h4',
+               'top':'20',
+               'font-size':'50pt',
+               duration: 900
+          })
+          .add({
+               targets:'.logIn form',
+               height: '100%',
+               opacity:1,
+               duration: 1500
+
+          },'-=800')
+          
+     
+     }
 
 
      return  (
           <div className="logIn" 
           onMouseMoveCapture={()=>prop.onMouseOverMethod(".logIn")} 
-          onMouseLeave={()=>prop.onMouseLeaveMethod(".logIn")} >
+          onMouseLeave={()=>prop.onMouseLeaveMethod(".logIn")} onClick={()=>handleClick()}>
                <h4 unselectable="on">Log In</h4>
                <form onSubmit={handleSubmit}>
                     <input type="text" 

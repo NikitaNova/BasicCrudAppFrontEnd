@@ -11,7 +11,7 @@
 
 @mixin defaultFormSize()
      width: 90%
-     height: 100%
+     height: 30%
 
 @mixin inputSize()
      width: 150pt
@@ -20,6 +20,13 @@
 @mixin buttonSize()
      width: 130pt
      height: 35pt
+
+@mixin displayGrid($columns, $rows, $justify, $align)
+     display: grid
+     grid-template-columns: $columns
+     grid-template-rows: $rows
+     justify-items: $justify
+     align-items: $align
 
 // Style
 
@@ -63,11 +70,12 @@ $white: #ededed
 $smallFontSize: 20pt
 $normalFontSize: 40pt
 $largeFontSize: 60pt
+$biggerLargeFontSize: 90pt
 $extraLargeFontSize: 110pt
 
 @mixin defaultMarginBlock()
-     margin-block-start: .5em
-     margin-block-end: .1em
+     margin-block-start: 0em
+     margin-block-end: 0em
 
 @mixin DINnormal($color,$font-size)
      font-family: normal, din-2014, sans-serif

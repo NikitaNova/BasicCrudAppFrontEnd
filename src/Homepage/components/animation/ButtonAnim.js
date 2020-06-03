@@ -18,4 +18,15 @@ const handleMouseLeave = (name) =>anime({
      autoplay:true
 })
 
-export {handleMouseOver,handleMouseLeave}
+const logInReveal =
+     anime.timeline({  
+          autoplay: false,
+          loop:false
+     })
+     .add({
+          targets:'.logIn h4',
+          opacity: [0,1],
+          duration: 700
+     });
+
+export {handleMouseOver,handleMouseLeave,logInReveal}

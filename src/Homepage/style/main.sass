@@ -24,8 +24,16 @@ body
           @include defaultFlex(row , space-around , center)
 
           h4
-               @include defaultMarginBlock()
-               @include DINbold($black ,$normalFontSize)
+               display: block
+               position: relative
+               top:70pt
+               @include defaultMarginBlock() // TODO Animate Margin Block Start: .5em
+               @include DINbold($black ,$biggerLargeFontSize) // TODO Animate font size: 20pt
+
+               
+          form
+               opacity: 0 // TODO: Animate Opcaity: 1
+               // TODO Animate FORM height 100%
                
           input
                @include inputSize()
@@ -48,38 +56,39 @@ body
                
           .logIn
                @include logBoxSize()
-               @include defaultFlex(column ,flex-start ,center )
+               @include displayGrid(1fr,20% auto, center, center)
+               
                background-color: $orange
                @include boxShadowRadius()
 
                form
                     @include defaultFormSize()
+                    @include displayGrid(1fr 1fr , 1fr 1fr 1fr , center ,center )
 
-                    display: grid
-                    grid-template-columns: 1fr 1fr
-                    grid-template-rows: 1fr 1fr 1fr
-                    justify-items: center
-                    align-items: center 
+                    align-self: end
+                    
 
                     input
                          grid-column: 1/3
+                    
+                    input[name="username"]
+                         margin: 30pt 0 0 0
 
           .signUp
                @include logBoxSize()
-               @include defaultFlex(column , flex-start ,center)
+               @include displayGrid(1fr,20% auto, center, center)
+
                
                background-color: $blue
                @include boxShadowRadius()
                @include DINnormal($black ,$normalFontSize )
                
+               
                form
                     @include defaultFormSize()
-
-                    display: grid
-                    grid-template-columns: 1fr 1fr
-                    grid-template-row: 1fr 1fr 1fr
-                    justify-items: center
-                    align-items: center
+                    @include displayGrid(1fr 1fr, 1fr 1fr 1fr, center, center)
+                    
+                    align-self: end
 
                     input[name="signUpUsername"]
                          grid-column: 1/2
