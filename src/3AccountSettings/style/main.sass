@@ -1,0 +1,165 @@
+@use '../../style/var' as *
+*
+     margin: 0
+     border: none
+     outline: none
+     @include DINnormal($black, 15pt)
+
+.pageContainer
+     @include defaultFlex(inherit,inherit,inherit)
+     background-color: $white
+
+     aside
+          @include defaultFlex(column,flex-start,center)
+          @include divSize(30%,100%)
+
+          background-color: $black
+          border-top-right-radius: 20pt
+          border-bottom-right-radius: 20pt
+          box-shadow: 19pt 10pt 40pt $black-transparent
+
+          .profilePhoto
+               @include divSize(250pt,250pt)
+               margin: 20pt 0
+
+               @include defaultFlex(inherit, center, center)
+               background-color: $white
+               border-radius: 50%
+
+               img
+                    @include divSize(220pt,220pt)
+                    height: 50px
+                    line-height: 50px
+                    text-align: center
+                    border-radius: 50px
+
+          hr
+               @include divSize(70%,3pt)
+               margin: 2pt 0
+
+               background-color: $white
+               border-radius: 3pt
+
+          h1 
+               @include DINnormal($white, $largeFontSize)
+
+          .backIcon
+               margin: 10pt
+               position: relative
+               top: 70pt
+          img
+                    @include divSize(150pt,150pt)
+
+     main
+          @include divSize(100%,100%)
+          @include displayGrid(50% 50% , 50% 25% 25%, start, end)
+
+          h1
+               font-size: $normalFontSize
+
+
+          input
+               @include divSize(190pt, 20pt)
+               margin: 10pt
+               padding: 10pt
+               border-radius: 10pt
+
+               background-color: $white
+               box-shadow: 5pt 10pt 25pt #0f0f0f3f
+
+               font-size: $smallFontSize
+
+          textarea
+               background-color: $white
+               box-shadow: 5pt 10pt 25pt #0f0f0f3f
+
+          button
+               @include divSize(130pt,40pt)
+               margin: 10pt
+               font-size: $smallFontSize
+
+               border-radius: 10pt
+               background-color: $blue
+               color: $black
+               box-shadow: 5pt 10pt 25pt #0f0f0f3f
+               
+     .changeInfo,.changeBio
+          margin: 45pt 0 0 0
+
+     .changeInfo
+          @include divSize(100%,100%)
+          grid-area: 1/1 / 2/2
+
+          label
+               @include defaultFlex(column, flex-start, center)
+               margin: 20pt 0 0 0
+
+     .changePassword
+          @include divSize(100%,100%)
+          grid-area: 2/1 / 4/2
+
+          label
+               @include divSize(100%,100%)
+               @include defaultFlex(column, flex-start,center)
+
+
+     .changeBio
+          @include divSize(100%,100%)
+          grid-area: 1/2 / 3/3
+
+          label
+               @include defaultFlex(column, flex-start, center)
+               margin: 20pt 0 0 0
+
+               textarea
+                    @include divSize(300pt, 300pt)
+                    padding: 10pt
+                    margin: 10pt
+                    border-radius: 10pt
+                    resize: none
+                    font-size: $smallFontSize
+
+     .deleteAcc
+          @include divSize(100%,100%)
+          @include defaultFlex(inherit, center, center)
+          grid-area: 3/2 / 4/3
+          margin: 10pt
+
+          button
+               @include divSize(250pt, 80pt)
+               @include DINbold(inherit, $normalFontSize)
+               background-color: $orange
+               border-radius: 10pt
+               box-shadow: 15pt 15pt 35pt #0f0f0f4f
+
+// Responsive
+@media (max-width: 1400px)
+     .pageContainer
+          flex-direction: column
+
+     aside
+          flex-direction: row-reverse !important
+          justify-content: center !important
+          height: 20% !important
+          width: 100% !important
+          border-radius: 0 0 20pt 20pt !important
+          .profilePhoto img, .profilePhoto
+               display: none !important
+
+          hr
+               display: none
+
+          .backIcon
+               top: 0 !important
+               img
+                    width: 100pt !important
+                    height: 100pt !important
+
+
+     main
+          overflow: scroll
+          display: flex !important
+          flex-direction: column !important
+
+
+

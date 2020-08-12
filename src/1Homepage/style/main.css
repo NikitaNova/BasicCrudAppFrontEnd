@@ -1,0 +1,206 @@
+body {
+  font-size: 15pt;
+  margin: 0;
+  background-color: #ededed;
+}
+
+.headContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.headContainer header {
+  height: 32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom-left-radius: 20pt;
+  border-bottom-right-radius: 20pt;
+  box-shadow: 15pt 20pt 50pt #0f0f0f79;
+  background-color: #0f0f0f;
+}
+.headContainer header h1 {
+  margin-top: 10px;
+  margin-left: 40px;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 700;
+  color: #ededed;
+  font-size: 6em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer {
+  height: 68%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.headContainer .logContainer h4 {
+  display: block;
+  position: relative;
+  top: 70pt;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 700;
+  color: #0f0f0f;
+  font-size: 5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer div {
+  margin: 30pt;
+}
+.headContainer .logContainer form {
+  opacity: 1;
+  height: 0%;
+}
+.headContainer .logContainer form * {
+  opacity: 0;
+}
+.headContainer .logContainer input {
+  width: 150pt;
+  height: 30pt;
+  marign: 10pt;
+  background: none;
+  border: none;
+  border-bottom: 2pt solid #0f0f0f;
+  outline: none;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #0f0f0f;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer input::placeholder {
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #0f0f0f79;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer button {
+  width: 130pt;
+  height: 35pt;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  background-color: #0f0f0f;
+  border: none;
+  border-radius: 8pt;
+  outline: none;
+  align-self: end;
+  margin: 20pt;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 700;
+  color: #ededed;
+  font-size: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headContainer .logContainer button:active {
+  background-color: #ededed;
+  color: #0f0f0f;
+}
+.headContainer .logContainer .logIn {
+  width: 450pt;
+  height: 300pt;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% auto;
+  justify-items: center;
+  align-items: center;
+  background-color: #FF4F00;
+  border-radius: 10pt;
+  box-shadow: 15pt 20pt 50pt #0f0f0f79;
+}
+.headContainer .logContainer .logIn form {
+  width: 90%;
+  height: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  align-self: end;
+}
+.headContainer .logContainer .logIn form input {
+  grid-column: 1/3;
+}
+.headContainer .logContainer .logIn form input[name=username] {
+  margin: 30pt 0 0 0;
+}
+.headContainer .logContainer .signUp {
+  width: 450pt;
+  height: 300pt;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% auto;
+  justify-items: center;
+  align-items: center;
+  background-color: #194fff;
+  border-radius: 10pt;
+  box-shadow: 15pt 20pt 50pt #0f0f0f79;
+}
+.headContainer .logContainer .signUp form {
+  width: 90%;
+  height: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  align-self: end;
+}
+.headContainer .logContainer .signUp form input[name=signUpUsername] {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.headContainer .logContainer .signUp form input[name=signUpPassword] {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.headContainer .logContainer .signUp form input[name=firstName] {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.headContainer .logContainer .signUp form input[name=lastName] {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.headContainer .logContainer .signUp form a {
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 1365px) {
+  body {
+    font-size: 12pt !important;
+  }
+
+  header {
+    height: 25% !important;
+  }
+
+  .logContainer input {
+    width: 100pt !important;
+  }
+
+  .logContainer {
+    flex-wrap: wrap !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

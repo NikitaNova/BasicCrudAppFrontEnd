@@ -1,0 +1,133 @@
+@use '../../style/var' as *
+@use './responsive' as *
+// AS = Animation Setup
+
+*
+     // Position | Size
+     margin: 0
+     // Font
+     font-size: 15pt
+
+body
+     background-color: $white
+
+.pageContainer
+     // Position | Size
+     @include defaultFlex(column, flex-start, inherit)
+     height: 100vh
+
+     header
+          // Position | Size
+          height: 32%
+          @include displayGrid(1fr 1fr, 100%, center, center)
+
+          // Style
+          @include headerBoxShadowRadius()
+          background-color: $black
+          container-overflow: visible
+
+          img
+               // Posotion | Size
+               @include divSize(160pt, 160pt)
+               margin: 40pt
+
+               grid-area: 1/1   /   2/2
+
+               justify-self: self-start
+
+          div
+               @include divSize(250pt,250pt)
+               margin-top: 20pt
+
+               grid-area: 1 / 1   /   2 / 4
+
+               align-self: self-start
+
+               // Style
+               background-color: $white
+               border-radius: 50%
+               box-shadow: 19pt 10pt 50pt $black-transparent
+               z-index: 1
+
+     main
+          // Position | Size
+          height: 100%
+
+          @include defaultFlex(column, flex-end, center)
+
+          .infoDisplay
+               @include divSize(30%,30%)
+               @include defaultFlex(row, center, flex-end)
+
+               // Font
+               font-size: $normalFontSize
+
+               img
+                    @include divSize(50pt,50pt)
+                    @include justifyAlignSelf(flex-end, center)
+                    margin: 20pt
+                    -webkit-user-select: none /* Safari */
+                    -moz-user-select: none /* Firefox */
+                    -ms-user-select: none /* IE10+/Edge */
+                    user-select: none /* Standard */
+
+               h4
+                    @include justifyAlignSelf(flex-end, center)
+                    @include DINnormal($black, $extraSmallFontSize)
+                    -webkit-user-select: none /* Safari */
+                    -moz-user-select: none /* Firefox */
+                    -ms-user-select: none /* IE10+/Edge */
+                    user-select: none /* Standard */
+
+          .bioPage
+               @include divSize(45%, 50%)
+               @include defaultFlex(column, flex-end,center)
+               padding: 20pt
+
+               // Style
+               background-color: $black
+               border-radius: 30pt 30pt 0 0
+               box-shadow: 19pt 10pt 50pt $black-transparent
+
+               h5
+                    // Positioning | Size
+                    @include justifyAlignSelf(inherit, flex-start)
+                    margin: 0 0 10pt 0
+
+                    // Font
+                    @include DINbold($white, $normalFontSize)
+
+               p
+                    //Position & Size
+                    @include divSize(100%,100%)
+                    resize: none
+                    @include DINnormal($white, $smallFontSize)
+                    //Stylem
+                    background: none
+                    outline: none
+                    border: none
+
+                    // Font
+
+@media all and (max-width: 1400px )
+     body
+          font-size: 13pt !important
+
+     header
+          height: 25% !important
+
+          img
+               width: 80pt !important
+               height: 80pt !important
+
+               margin: 10pt !important
+
+          .profilePic
+               width: 150pt !important
+               height: 150pt !important
+               margin: 10pt !important
+     .bioPage
+          height: 60% !important
+          width: 70% !important
+
+

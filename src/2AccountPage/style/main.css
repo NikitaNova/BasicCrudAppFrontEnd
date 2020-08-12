@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  font-size: 15pt;
+}
+
+body {
+  background-color: #ededed;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: inherit;
+  height: 100vh;
+}
+.pageContainer header {
+  height: 32%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  justify-items: center;
+  align-items: center;
+  border-bottom-left-radius: 20pt;
+  border-bottom-right-radius: 20pt;
+  box-shadow: 15pt 20pt 50pt #0f0f0f79;
+  background-color: #0f0f0f;
+  container-overflow: visible;
+}
+.pageContainer header img {
+  width: 160pt;
+  height: 160pt;
+  margin: 40pt;
+  grid-area: 1/1/2/2;
+  justify-self: self-start;
+}
+.pageContainer header div {
+  width: 250pt;
+  height: 250pt;
+  margin-top: 20pt;
+  grid-area: 1/1/2/4;
+  align-self: self-start;
+  background-color: #ededed;
+  border-radius: 50%;
+  box-shadow: 19pt 10pt 50pt #0f0f0f79;
+  z-index: 1;
+}
+.pageContainer main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pageContainer main .infoDisplay {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 2.3em;
+}
+.pageContainer main .infoDisplay img {
+  width: 50pt;
+  height: 50pt;
+  justify-self: flex-end;
+  align-self: center;
+  margin: 20pt;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pageContainer main .infoDisplay h4 {
+  justify-self: flex-end;
+  align-self: center;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 0.8em;
+  color: #0f0f0f;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pageContainer main .bioPage {
+  width: 45%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20pt;
+  background-color: #0f0f0f;
+  border-radius: 30pt 30pt 0 0;
+  box-shadow: 19pt 10pt 50pt #0f0f0f79;
+}
+.pageContainer main .bioPage h5 {
+  justify-self: inherit;
+  align-self: flex-start;
+  margin: 0 0 10pt 0;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 700;
+  color: #ededed;
+  font-size: 2.3em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pageContainer main .bioPage p {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #ededed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+@media all and (max-width: 1400px) {
+  body {
+    font-size: 13pt !important;
+  }
+
+  header {
+    height: 25% !important;
+  }
+  header img {
+    width: 80pt !important;
+    height: 80pt !important;
+    margin: 10pt !important;
+  }
+  header .profilePic {
+    width: 150pt !important;
+    height: 150pt !important;
+    margin: 10pt !important;
+  }
+
+  .bioPage {
+    height: 60% !important;
+    width: 70% !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 15pt;
+  color: #0f0f0f;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  background-color: #ededed;
+}
+.pageContainer aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  background-color: #0f0f0f;
+  border-top-right-radius: 20pt;
+  border-bottom-right-radius: 20pt;
+  box-shadow: 19pt 10pt 40pt #0f0f0f79;
+}
+.pageContainer aside .profilePhoto {
+  width: 250pt;
+  height: 250pt;
+  margin: 20pt 0;
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+  border-radius: 50%;
+}
+.pageContainer aside .profilePhoto img {
+  width: 220pt;
+  height: 220pt;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50px;
+}
+.pageContainer aside hr {
+  width: 70%;
+  height: 3pt;
+  margin: 2pt 0;
+  background-color: #ededed;
+  border-radius: 3pt;
+}
+.pageContainer aside h1 {
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 400;
+  font-size: 4em;
+  color: #ededed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pageContainer aside .backIcon {
+  margin: 10pt;
+  position: relative;
+  top: 70pt;
+}
+.pageContainer aside img {
+  width: 150pt;
+  height: 150pt;
+}
+.pageContainer main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 25% 25%;
+  justify-items: start;
+  align-items: end;
+}
+.pageContainer main h1 {
+  font-size: 2.3em;
+}
+.pageContainer main input {
+  width: 190pt;
+  height: 20pt;
+  margin: 10pt;
+  padding: 10pt;
+  border-radius: 10pt;
+  background-color: #ededed;
+  box-shadow: 5pt 10pt 25pt #0f0f0f3f;
+  font-size: 1em;
+}
+.pageContainer main textarea {
+  background-color: #ededed;
+  box-shadow: 5pt 10pt 25pt #0f0f0f3f;
+}
+.pageContainer main button {
+  width: 130pt;
+  height: 40pt;
+  margin: 10pt;
+  font-size: 1em;
+  border-radius: 10pt;
+  background-color: #194fff;
+  color: #0f0f0f;
+  box-shadow: 5pt 10pt 25pt #0f0f0f3f;
+}
+.pageContainer .changeInfo, .pageContainer .changeBio {
+  margin: 45pt 0 0 0;
+}
+.pageContainer .changeInfo {
+  width: 100%;
+  height: 100%;
+  grid-area: 1/1/2/2;
+}
+.pageContainer .changeInfo label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20pt 0 0 0;
+}
+.pageContainer .changePassword {
+  width: 100%;
+  height: 100%;
+  grid-area: 2/1/4/2;
+}
+.pageContainer .changePassword label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pageContainer .changeBio {
+  width: 100%;
+  height: 100%;
+  grid-area: 1/2/3/3;
+}
+.pageContainer .changeBio label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20pt 0 0 0;
+}
+.pageContainer .changeBio label textarea {
+  width: 300pt;
+  height: 300pt;
+  padding: 10pt;
+  margin: 10pt;
+  border-radius: 10pt;
+  resize: none;
+  font-size: 1em;
+}
+.pageContainer .deleteAcc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: center;
+  grid-area: 3/2/4/3;
+  margin: 10pt;
+}
+.pageContainer .deleteAcc button {
+  width: 250pt;
+  height: 80pt;
+  font-family: normal, din-2014, sans-serif;
+  font-weight: 700;
+  color: inherit;
+  font-size: 2.3em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #FF4F00;
+  border-radius: 10pt;
+  box-shadow: 15pt 15pt 35pt #0f0f0f4f;
+}
+
+@media (max-width: 1400px) {
+  .pageContainer {
+    flex-direction: column;
+  }
+
+  aside {
+    flex-direction: row-reverse !important;
+    justify-content: center !important;
+    height: 20% !important;
+    width: 100% !important;
+    border-radius: 0 0 20pt 20pt !important;
+  }
+  aside .profilePhoto img, aside .profilePhoto {
+    display: none !important;
+  }
+  aside hr {
+    display: none;
+  }
+  aside .backIcon {
+    top: 0 !important;
+  }
+  aside .backIcon img {
+    width: 100pt !important;
+    height: 100pt !important;
+  }
+
+  main {
+    overflow: scroll;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

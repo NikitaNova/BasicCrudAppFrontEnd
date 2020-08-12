@@ -1,0 +1,135 @@
+@use 'vars/vars.sass' as *
+@use '../../style/var.sass' as *
+@use './vars/responsive' as *
+
+body
+     font-size: 15pt
+     margin: 0
+     background-color: $white
+
+.headContainer
+     height: 100vh
+     display: flex
+     flex-direction: column
+
+     header
+          height: 32%
+          @include defaultFlex(row ,flex-start ,flex-start)
+          @include headerBoxShadowRadius()
+          background-color: $black
+
+          h1
+               margin-top: 10px
+               margin-left: 40px
+               @include DINbold($white,$extraLargeFontSize)
+
+     .logContainer
+          height: 68%
+          @include defaultFlex(row ,space-around ,center)
+
+          h4
+               display: block
+               position: relative
+               top: 70pt
+               @include defaultMarginBlock()
+               @include DINbold($black ,$biggerLargeFontSize)
+
+          div
+               margin: 30pt
+
+          form
+               opacity: 1
+               height: 0%
+
+               *
+                    opacity: 0
+
+          input
+               @include inputSize()
+               marign: 10pt
+               @include inputStyle()
+               @include DINnormal($black ,$smallFontSize)
+
+          input::placeholder
+               @include DINnormal($black-transparent ,$smallFontSize)
+
+          button
+               @include buttonSize()
+
+               grid-column: 1/3
+               grid-row: 3/4
+
+               @include defaultButtonStyle()
+               @include DINbold($white , $smallFontSize)
+
+          button:active
+               background-color: $white
+               color: $black
+
+          .logIn
+               @include logBoxSize()
+               @include displayGrid(1fr,20% auto, center, center)
+
+               background-color: $orange
+               @include boxShadowRadius()
+
+               form
+                    @include defaultFormSize()
+                    @include displayGrid(1fr 1fr , 1fr 1fr 1fr , center ,center )
+
+                    align-self: end
+
+                    input
+                         grid-column: 1/3
+
+                    input[name="username"]
+                         margin: 30pt 0 0 0
+
+
+          .signUp
+               @include logBoxSize()
+               @include displayGrid(1fr,20% auto, center, center)
+
+
+               background-color: $blue
+               @include boxShadowRadius()
+
+               form
+                    @include defaultFormSize()
+                    @include displayGrid(1fr 1fr, 1fr 1fr 1fr, center, center)
+
+                    align-self: end
+
+                    input[name="signUpUsername"]
+                         grid-column: 1/2
+                         grid-row: 1/2
+
+                    input[name="signUpPassword"]
+                         grid-column: 2/3
+                         grid-row: 1/2
+
+                    input[name="firstName"]
+                         grid-column: 1/2
+                         grid-row: 2/3
+
+                    input[name="lastName"]
+                         grid-column: 2/3
+                         grid-row: 2/3
+
+                    a
+                         grid-column: 1/3
+
+
+@media screen and (max-width: 1365px)
+     body
+          font-size: 12pt !important
+
+     header
+          height: 25% !important
+
+     .logContainer
+          input
+               width: 100pt !important
+
+     .logContainer
+          flex-wrap: wrap !important

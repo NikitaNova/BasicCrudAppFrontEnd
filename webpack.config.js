@@ -2,10 +2,18 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports ={
-     entry: './src/Homepage/index.js',
+     entry: {
+          homepage:'./src/1Homepage/index.js',
+          accountPage:'./src/2AccountPage/index.js',
+          accountSettings:'./src/3AccountSettings/index.js'
+     },
+
      output: {
-          path:path.join(__dirname, "dist"),
-          filename: "index_bundle.js"
+          path:path.join(__dirname, "dist/"),
+          filename: "[name].bundle.js"
+     },
+     devServer: {
+          contentBase:'./dist'
      },
      module: {
           rules:[
@@ -30,19 +38,29 @@ module.exports ={
                     use:{ 
                          loader: 'file-loader',
                          options: {
-                              name:"[name].[hash].[ext]",
+                              name:"[name].[ext]",
                               outputPath: "imgs"
                          }
                     }
                     
                }
-               
-
           ]
      },
      plugins:[
           new HtmlWebpackPlugin({
-               template:"./src/Homepage/index.html"
-          })
+               filename: "homepage.html",
+               template: "./src/1Homepage/homepage.html",
+               chunks: ['homepage']
+          }),
+         new HtmlWebpackPlugin({
+              filename: "accountPage.html",
+              template: "./src/2AccountPage/accountPage.html",
+              chunks: ['accountPage']
+         }),
+         new HtmlWebpackPlugin({
+              filename: "accountSettings.html",
+              template: "./src/3AccountSettings/accountSettings.html",
+              chunks: ['accountSettings']
+         })
      ]
 }
